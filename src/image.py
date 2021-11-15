@@ -110,5 +110,7 @@ class Image:
             for j in range (self.W):
                 if self.pixels[i][j]==u.pixels[i][j]:
                     a=a+1
-        return (a/(self.H*self.W))*100 + "%"
+                else:
+                    None
+        return (a/(self.H*self.W))*100
 
