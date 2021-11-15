@@ -74,7 +74,6 @@ class Image:
         cmin = 0
         cmax = 0
         im_bin2 = Image()
-        im_bin2.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
         for l in range (self.H):
             for c in range (self.W):
                 if l<lmin:
@@ -88,7 +87,9 @@ class Image:
                         c=cmin
                 elif c>cmax:
                     c=cmax
+        im_bin2.set_pixels(im_bin2.pixels[lmin:cmin,lmax:cmax], dtype=np.uint8)
         return im_bin2 
+#                
 
     #==============================================================================
     # Methode de redimensionnement d'image
