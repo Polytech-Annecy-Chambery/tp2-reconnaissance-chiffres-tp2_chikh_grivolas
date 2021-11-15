@@ -67,8 +67,7 @@ class Image:
     #   self : l'image binaire que l'on veut recadrer
     #   on retourne une nouvelle image recadree
     #==============================================================================
-
-     def localisation(self):
+    def localisation(self):
         lmin = self.H-1
         lmax = 0
         cmin = self.W-1
@@ -90,7 +89,8 @@ class Image:
                     if self.pixels[l][c]==0:
                         cmax = c
         im_bin2.set_pixels(self.pixels[lmin:lmax,cmin:cmax])
-        return im_bin2 
+        return im_bin2
+     
 
     #==============================================================================
     # Methode de redimensionnement d'image
