@@ -45,10 +45,10 @@ class Image:
         for i in range (self.H):
             for j in range (self.W):
                 if self.pixels[i][j]<S:
-                    self.pixels[i][j]=0
+                    im_bin.pixels[i][j]=0
                 else:
-                    self.pixels[i][j]=255
-        return im_bin
+                    im_bin.pixels[i][j]=255
+        return im_bin 
 
 
 
