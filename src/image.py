@@ -2,9 +2,7 @@ from skimage import io
 from skimage.transform import resize
 import matplotlib.pyplot as plt
 import numpy as np
-from image import Image
-from reconnaissance 
-import reconnaissance_chiffre, lecture_modeles
+
 
 class Image:
     def __init__(self):
@@ -44,15 +42,7 @@ class Image:
 
 
 
-    def binarisation(self, S):
-         im_bin = Image()
-         im_bin.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
-         for i in range (self.H):
-              for x in range (self.W):
-                 if im_bin.pixels[self.H][self.W]<S:
-                       im_bin.pixels[self.H][self.W]=0
-                 else:
-                       im_bin.pixels[self.H][self.W]=255
+    
 
 
     #==============================================================================
