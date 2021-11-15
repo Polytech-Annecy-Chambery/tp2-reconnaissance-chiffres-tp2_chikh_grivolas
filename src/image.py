@@ -112,5 +112,5 @@ class Image:
                     a=a+1
                 else:
                     None
-        return (a/(self.H*self.W))*100
+        return (a/(self.H*self.W))*100 
 
