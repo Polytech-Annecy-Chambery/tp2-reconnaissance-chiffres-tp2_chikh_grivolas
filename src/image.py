@@ -44,10 +44,11 @@ class Image:
         im_bin.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
         for i in range (self.H):
             for j in range (self.W):
-                if im_bin.pixels[i][j]<S:
-                    im_bin.pixels[i][j]=0
+                if self.pixels[i][j]<S:
+                    self.pixels[i][j]=0
                 else:
-                    im_bin.pixels[i][j]=255
+                    self.pixels[i][j]=255
+        return im_bin
 
 
 
