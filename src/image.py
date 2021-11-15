@@ -38,7 +38,16 @@ class Image:
             io.show()
         else:
             print("L'image est vide. Rien à afficher")
-
+            
+     def binarisation(self, S):
+        im_bin = Image()
+        im_bin.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
+        for i in range (self.H):
+            for x in range (self.W):
+                if im_bin.pixels[self.H][self.W]<S:
+                    im_bin.pixels[self.H][self.W]=0
+                else:
+                    im_bin.pixels[self.H][self.W]=255
 
 
 
