@@ -3,7 +3,6 @@ from skimage.transform import resize
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 class Image:
     def __init__(self):
         """Initialisation d'une image composee d'un tableau numpy 2D vide
@@ -24,7 +23,7 @@ class Image:
 
 
     def load(self, file_name):
-        """ Lecture d'un image a partir d'un fichier de nom "file_name"""
+        """ Lecture d'une image à partir d'un fichier de nom "file_name"""
         self.pixels = io.imread(file_name)
         self.H,self.W = self.pixels.shape 
         print("lecture image : " + file_name + " (" + str(self.H) + "x" + str(self.W) + ")")
@@ -38,8 +37,16 @@ class Image:
             io.show()
         else:
             print("L'image est vide. Rien à afficher")
-            
-     def binarisation(self, S):
+
+
+    #==============================================================================
+    # Methode de binarisation
+    # 2 parametres :
+    #   self : l'image a binariser
+    #   S : le seuil de binarisation
+    #   on retourne une nouvelle image binarisee
+    #==============================================================================
+    def binarisation(self, S):
         im_bin = Image()
         im_bin.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
         for i in range (self.H):
@@ -49,10 +56,7 @@ class Image:
                 else:
                     im_bin.pixels[i][j]=255
         return im_bin  
-
-
-
-    
+                    
 
 
     #==============================================================================
@@ -63,8 +67,17 @@ class Image:
     #   self : l'image binaire que l'on veut recadrer
     #   on retourne une nouvelle image recadree
     #==============================================================================
-    def localisation(self):
-        pass
+#    def localisation(self):
+#        lmin = 0
+#        lmaw = 0
+#        cmin = 0
+#        cmax = 0
+#        im_bin2 = Image()
+#        im_bin2.set_pixels(np.zeros((self.H, self.W), dtype=np.uint8))
+#        for i in range (self.H):
+#            for j in range (self.W):
+#                 if self.pixels[i][j]
+#                
 
     #==============================================================================
     # Methode de redimensionnement d'image
