@@ -48,7 +48,7 @@ class Image:
                     im_bin.pixels[i][j]=0
                 else:
                     im_bin.pixels[i][j]=255
-        return im_bin 
+        return im_bin  
 
 
 
