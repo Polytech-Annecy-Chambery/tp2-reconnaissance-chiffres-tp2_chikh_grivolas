@@ -18,9 +18,10 @@ def reconnaissance_chiffre(image, liste_modeles, S):
     ind=0
     for i in range (len(liste_modeles)):
         im=image.resize(liste_modeles[i].H,liste_modeles[i].W)
-        sim= image.similitude(liste_modeles[i])
+        sim= im.similitude(liste_modeles[i])
         if im.similitude(liste_modeles[i])>sim:
             sim=im.similitude(liste_modeles[i])
             ind=i
-    return ind 
+    return ind
+        
 
